@@ -1,0 +1,143 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const all = await getCollection("projects");
+const byOrder = (a: (typeof all)[number], b: (typeof all)[number]) =>
+  a.data.order - b.data.order;
+const featured = all.filter((p) => p.data.tier === "featured").sort(byOrder);
+const more = all.filter((p) => p.data.tier === "more").sort(byOrder);
+---
+
+<Base
+  title="Vivek Kumar Gupta — software I've built"
+  description="Small, offline-first software by Vivek Kumar Gupta: Android apps measured in kilobytes, a self-hosted media server, and a tool that lets AI agents make animated films."
+>
+  <section class="hero wrap">
+    <p class="eyebrow">Software engineer · Bangalore</p>
+    <h1>
+      I build small, sharp software that works <em>without the internet</em>.
+    </h1>
+    <p class="lede">
+      Android apps measured in kilobytes, a self-hosted media server for the
+      family NAS, and a tool that lets AI agents make animated films. Everything
+      here is open source. This page is the long version of my GitHub profile:
+      what each project is, why it exists, and the decisions behind it.
+    </p>
+  </section>
+
+  <section id="work" class="wrap">
+    <h2 class="section-title">Selected work</h2>
+    <div class="grid">
+      {featured.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">More projects</h2>
+    <ul class="rows">
+      {more.map(({ data }) => (
+        <li>
+          <a href={data.repo}>
+            <span class="row-title">{data.title}</span>
+            <span class="row-tagline">{data.tagline}</span>
+            <span class="row-meta">
+              {data.stack[0]} · {data.year}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding-top: clamp(2.5rem, 8vw, 6rem);
+    padding-bottom: clamp(3rem, 8vw, 5.5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 6.2vw, 4.4rem);
+    max-width: 17ch;
+    margin-top: 1rem;
+  }
+
+  .hero em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .lede {
+    max-width: 38rem;
+    margin: 1.75rem 0 0;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem;
+    padding-top: 1rem;
+  }
+
+  section + section {
+    margin-top: 4.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+    gap: 1.25rem;
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .rows a {
+    display: grid;
+    grid-template-columns: 11rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1rem 0.25rem;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .rows a:hover .row-title {
+    color: var(--accent);
+  }
+
+  .row-title {
+    font-weight: 600;
+  }
+
+  .row-tagline {
+    color: var(--muted);
+  }
+
+  .row-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 40rem) {
+    .rows a {
+      grid-template-columns: 1fr auto;
+    }
+
+    .row-tagline {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import "@fontsource-variable/fraunces";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/jetbrains-mono";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="theme-color" content="#f6f3ed" />
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a class="mark" href="/">
+        Vivek Kumar Gupta
+      </a>
+      <nav aria-label="Main">
+        <a href="/#work">Work</a>
+        <a href="https://github.com/vivekg7">GitHub</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer wrap">
+      <span>© {new Date().getFullYear()} Vivek Kumar Gupta</span>
+      <a href="https://github.com/vivekg7/vivekg7.github.io">Source</a>
+    </footer>
+    <script is:inline>
+      // The old site registered a service worker. Fetching the replacement
+      // (public/service-worker.js) makes it remove itself; nothing new is
+      // registered here.
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+          regs.forEach((reg) => reg.update());
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .mark {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--muted);
+  }
+
+  nav a:hover {
+    color: var(--ink);
+  }
+
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 6rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+</style>

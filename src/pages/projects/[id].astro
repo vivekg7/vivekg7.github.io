@@ -1,0 +1,310 @@
+---
+import { Image } from "astro:assets";
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const projects = (await getCollection("projects"))
+    .filter((p) => p.data.page)
+    .sort((a, b) => a.data.order - b.data.order);
+  return projects.map((project, i) => ({
+    params: { id: project.id },
+    props: { project, next: projects[(i + 1) % projects.length] },
+  }));
+}
+
+const { project, next } = Astro.props;
+const p = project.data;
+const { Content } = await render(project);
+// Phone screenshots are tall; a wide cover is not. Lay them out differently.
+const tall = p.screenshots.length > 0;
+---
+
+<Base title={`${p.title} — Vivek Kumar Gupta`} description={p.tagline}>
+  <article style={`--accent: ${p.accent}`}>
+    <header class="head wrap">
+      <a class="back" href="/#work">
+        ← All work
+      </a>
+      <p class="eyebrow">
+        {p.platforms.join(" · ")} · {p.year}
+        {p.status && ` · ${p.status}`}
+      </p>
+      <h1>{p.title}</h1>
+      <p class="tagline">{p.tagline}</p>
+      <div class="actions">
+        <a class="button primary" href={p.repo}>
+          Source on GitHub
+        </a>
+        {p.links.map((l) => (
+          <a class="button" href={l.url}>
+            {l.label}
+          </a>
+        ))}
+      </div>
+    </header>
+
+    {p.facts.length > 0 && (
+      <dl class="facts wrap">
+        {p.facts.map((f) => (
+          <div>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
+
+    {tall ? (
+      <div class="shots" tabindex="0" aria-label="Screenshots">
+        {p.screenshots.map((s) => (
+          <Image
+            src={s.src}
+            alt={s.alt}
+            widths={[300, 600]}
+            sizes="300px"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    ) : (
+      p.cover && (
+        <figure class="cover wrap">
+          <Image
+            src={p.cover.src}
+            alt={p.cover.alt}
+            widths={[800, 1440]}
+            sizes="(min-width: 72rem) 67rem, 100vw"
+          />
+        </figure>
+      )
+    )}
+
+    <div class="prose wrap">
+      <Content />
+      <ul class="tags stack">
+        {p.stack.map((s) => (
+          <li>{s}</li>
+        ))}
+      </ul>
+    </div>
+
+    {next.id !== project.id && (
+      <nav class="next wrap" aria-label="Next project">
+        <a href={`/projects/${next.id}/`}>
+          <span class="eyebrow">Next project</span>
+          <span class="next-title">{next.data.title} →</span>
+          <span class="next-tagline">{next.data.tagline}</span>
+        </a>
+      </nav>
+    )}
+  </article>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(1.5rem, 5vw, 3.5rem);
+  }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--ink);
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 8vw, 5rem);
+    margin-top: 0.75rem;
+    color: var(--accent);
+  }
+
+  .tagline {
+    max-width: 40rem;
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    line-height: 1.45;
+    margin: 1.1rem 0 0;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    font-size: 0.92rem;
+    font-weight: 550;
+    text-decoration: none;
+    background: var(--surface);
+  }
+
+  .button:hover {
+    border-color: var(--accent);
+  }
+
+  .button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+    gap: 1px;
+    margin: 3rem auto 0;
+  }
+
+  .facts div {
+    padding: 1rem 0;
+    border-top: 2px solid var(--accent);
+    margin-right: 1.25rem;
+  }
+
+  .facts dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .facts dt {
+    order: 2;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.35rem;
+  }
+
+  .facts div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .shots {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 0.5rem
+      max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: max(
+      var(--gutter),
+      calc((100vw - var(--page)) / 2 + var(--gutter))
+    );
+    scrollbar-width: thin;
+  }
+
+  .shots :global(img) {
+    flex: 0 0 auto;
+    width: min(62vw, 15rem);
+    border-radius: 16px;
+    scroll-snap-align: start;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+  }
+
+  .cover {
+    margin: 3rem auto 0;
+  }
+
+  .cover :global(img) {
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+  }
+
+  .prose {
+    max-width: calc(var(--prose) + 2 * var(--gutter));
+    margin-top: 3.5rem;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.65rem;
+    margin: 2.75rem 0 0.9rem;
+  }
+
+  .prose :global(h3) {
+    font-size: 1.2rem;
+    margin: 2rem 0 0.6rem;
+  }
+
+  .prose :global(p),
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 1.1rem;
+  }
+
+  .prose :global(li) {
+    margin-bottom: 0.4rem;
+  }
+
+  .prose :global(li::marker) {
+    color: var(--accent);
+  }
+
+  .prose :global(:not(pre) > code) {
+    padding: 0.1em 0.35em;
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  }
+
+  .prose :global(pre) {
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.82rem;
+    border: 1px solid var(--line);
+  }
+
+  .prose :global(blockquote) {
+    margin: 1.5rem 0;
+    padding-left: 1.1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+  }
+
+  .stack {
+    margin-top: 2.5rem;
+  }
+
+  .next {
+    margin-top: 5rem;
+  }
+
+  .next a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .next-title {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .next a:hover .next-title {
+    color: var(--accent);
+  }
+
+  .next-tagline {
+    color: var(--muted);
+  }
+</style>
