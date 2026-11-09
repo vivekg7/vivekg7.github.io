@@ -15,7 +15,8 @@ npm run build     # static site in dist/
 npm run format    # prettier, including .astro files
 ```
 
-Node 22 or newer (the deploy workflow uses 22).
+Node 26, the version in `.nvmrc`. The deploy workflow reads the same file, so
+CI always builds with the version used locally.
 
 ## Adding a project
 
