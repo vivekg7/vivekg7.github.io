@@ -47,9 +47,20 @@ when a project ships a new version.
 `/stories/` lists every film on the
 [Kahani ki Potli](https://www.youtube.com/@KahaniKiPotli7) channel, which is
 made with talekit. Each film is one JSON file in `src/content/stories/`, with
-its cover in `src/assets/stories/`. The collections the filters offer are
-listed in `src/data/collections.ts`; a film from a new one needs an entry
-there first.
+its cover in `src/assets/stories/`. After a new film goes up:
+
+```sh
+npm run stories   # needs yt-dlp
+```
+
+For each film on the channel without a file, this drafts one from the video's
+title, description and chapters and downloads its thumbnail. It also fills in
+the reel once the matching Short is up. Read every new draft before
+committing it: the descriptions aren't all laid out alike, so the script reads
+them by script (Devanagari or Latin) and prints any field it couldn't find.
+Existing files are never redrafted, so fixes made by hand stay. The
+collections the filters offer are listed in `src/data/collections.ts`; a film
+from a new one needs an entry there first.
 
 The film plays from `youtube-nocookie.com`, and only once the cover is
 clicked, so a story page loads no YouTube code until then.

@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "stories": "node scripts/stories.mjs && prettier --write src/content/stories"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.3.0",

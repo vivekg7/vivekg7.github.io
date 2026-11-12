@@ -39,7 +39,8 @@ const projects = defineCollection({
     }),
 });
 
-// One JSON file per Kahani ki Potli film.
+// One JSON file per Kahani ki Potli film. `npm run stories` drafts a file for
+// each new film on the channel; after that the file is edited by hand.
 const stories = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/stories" }),
   schema: ({ image }) =>
