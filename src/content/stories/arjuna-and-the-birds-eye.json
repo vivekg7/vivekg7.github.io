@@ -1,0 +1,66 @@
+{
+  "title": "Arjuna and the Bird's Eye",
+  "titleHi": "अर्जुन और चिड़िया की आँख",
+  "collection": "mahabharata",
+  "youtube": "QOuSG_PArtQ",
+  "short": "pQ0rjTclAOQ",
+  "published": "2026-11-12",
+  "duration": 267,
+  "summary": "Guru Dronacharya taught the Pandava and Kaurava princes archery in his forest ashram. One day he set them a test: he placed a wooden bird high in a mango tree, and as each prince took aim he asked, \"What do you see?\" One saw the tree, one the clouds, and Bhima saw the ripe mangoes! But what did Arjuna see?",
+  "summaryHi": "गुरु द्रोणाचार्य के आश्रम में पांडव और कौरव राजकुमार धनुष-बाण चलाना सीखते थे। एक दिन गुरु ने उनकी परीक्षा ली: आम के एक ऊँचे पेड़ पर लकड़ी की एक चिड़िया रखी, और हर राजकुमार से निशाना साधते समय पूछा, \"तुम्हें क्या दिखाई दे रहा है?\" किसी को पेड़ दिखा, किसी को बादल, और भीम को तो पके-पके आम! पर अर्जुन ने क्या देखा?",
+  "moral": "Whoever keeps all his attention on his goal is the one who reaches it.",
+  "moralHi": "जो अपने लक्ष्य पर पूरा ध्यान लगाता है, वही उसे पाता है।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Guru Drona's ashram",
+      "titleHi": "गुरु द्रोण का आश्रम"
+    },
+    {
+      "start": 20,
+      "title": "Archery practice",
+      "titleHi": "धनुष-बाण का अभ्यास"
+    },
+    {
+      "start": 55,
+      "title": "The wooden bird",
+      "titleHi": "लकड़ी की चिड़िया"
+    },
+    {
+      "start": 93,
+      "title": "Yudhishthira",
+      "titleHi": "युधिष्ठिर"
+    },
+    {
+      "start": 120,
+      "title": "Duryodhana",
+      "titleHi": "दुर्योधन"
+    },
+    {
+      "start": 141,
+      "title": "Bhima and the mangoes",
+      "titleHi": "भीम और आम"
+    },
+    {
+      "start": 166,
+      "title": "The other princes",
+      "titleHi": "बाक़ी राजकुमार"
+    },
+    {
+      "start": 183,
+      "title": "Arjuna's turn",
+      "titleHi": "अर्जुन की बारी"
+    },
+    {
+      "start": 214,
+      "title": "The bird's eye",
+      "titleHi": "चिड़िया की आँख"
+    },
+    {
+      "start": 227,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/arjuna-and-the-birds-eye.jpg"
+}

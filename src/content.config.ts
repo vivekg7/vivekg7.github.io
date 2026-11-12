@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { collections as storyCollections } from "./data/collections";
 
 // One Markdown file per project. Frontmatter drives the cards and the page
 // header; the Markdown body is the long-form write-up on the project's page.
@@ -38,4 +39,39 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { projects };
+// One JSON file per Kahani ki Potli film.
+const stories = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "./src/content/stories" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      titleHi: z.string(),
+      collection: z.enum(
+        Object.keys(storyCollections) as [keyof typeof storyCollections],
+      ),
+      // YouTube video ids: the full film, and its portrait reel as a Short.
+      youtube: z.string(),
+      short: z.string().optional(),
+      published: z.coerce.date(),
+      // Seconds.
+      duration: z.number(),
+      summary: z.string(),
+      summaryHi: z.string(),
+      // Only where the film states one; not every story ends on a moral.
+      moral: z.string().optional(),
+      moralHi: z.string().optional(),
+      chapters: z
+        .array(
+          z.object({
+            start: z.number(),
+            title: z.string(),
+            titleHi: z.string().optional(),
+          }),
+        )
+        .default([]),
+      // The film's YouTube thumbnail, drawn by talekit from one of its frames.
+      cover: image(),
+    }),
+});
+
+export const collections = { projects, stories };

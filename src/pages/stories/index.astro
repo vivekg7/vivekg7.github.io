@@ -1,0 +1,323 @@
+---
+import Base from "../../layouts/Base.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { collections } from "../../data/collections";
+import { CHANNEL, STORY_ACCENT, getStories } from "../../lib/stories";
+
+const stories = await getStories();
+// Only collections that have a story yet get a filter button.
+const filters = Object.entries(collections)
+  .map(([key, c]) => ({
+    key,
+    ...c,
+    count: stories.filter((s) => s.data.collection === key).length,
+  }))
+  .filter((f) => f.count > 0);
+---
+
+<Base
+  title="Stories — Kahani ki Potli"
+  description="Animated Hindi stories for children: Panchatantra fables, Tenali Rama, Akbar–Birbal and other classic tales, each made by an AI agent with talekit."
+>
+  <div style={`--accent: ${STORY_ACCENT}`}>
+    <section class="hero wrap">
+      <p class="eyebrow">Kahani ki Potli · Made with talekit</p>
+      <h1>
+        Stories for children, <em>in Hindi</em>.
+      </h1>
+      <p class="lede">
+        Panchatantra fables, Tenali Rama, Akbar–Birbal and other classic tales,
+        each one an animated film made by an AI agent with{" "}
+        <a href="/projects/talekit/">talekit</a>. Every film has Hindi and
+        English subtitles, and goes out as a reel of around three minutes too.
+      </p>
+      <a class="channel" href={CHANNEL}>
+        Kahani ki Potli on YouTube ↗
+      </a>
+    </section>
+
+    <section class="wrap" aria-label="All stories">
+      <!-- Hidden until the script below runs: without it every story still shows. -->
+      <form class="controls" role="search" hidden>
+        <input
+          type="search"
+          name="q"
+          placeholder="Search in English or हिंदी"
+          aria-label="Search stories"
+          autocomplete="off"
+        />
+        <select name="sort" aria-label="Sort stories">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+          <option value="short">Shortest first</option>
+          <option value="title">A to Z</option>
+        </select>
+        <div class="chips" role="group" aria-label="Collection">
+          <button type="button" data-collection="" aria-pressed="true">
+            All <span>{stories.length}</span>
+          </button>
+          {filters.map((f) => (
+            <button type="button" data-collection={f.key} aria-pressed="false">
+              {f.label} <span>{f.count}</span>
+            </button>
+          ))}
+        </div>
+      </form>
+
+      <p class="count" aria-live="polite">
+        {stories.length} stories
+      </p>
+
+      <ul class="grid">
+        {stories.map((story) => (
+          <StoryCard story={story} />
+        ))}
+      </ul>
+
+      <p class="empty" hidden>
+        No story matches that. <button type="button">Show all stories</button>
+      </p>
+    </section>
+  </div>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>(".controls")!;
+  const input = form.querySelector<HTMLInputElement>("input")!;
+  const sort = form.querySelector<HTMLSelectElement>("select")!;
+  const chips = [...form.querySelectorAll<HTMLButtonElement>(".chips button")];
+  const grid = document.querySelector<HTMLUListElement>(".grid")!;
+  const cards = [...grid.querySelectorAll<HTMLLIElement>(".story")];
+  const count = document.querySelector<HTMLParagraphElement>(".count")!;
+  const empty = document.querySelector<HTMLParagraphElement>(".empty")!;
+
+  const orders: Record<string, (a: DOMStringMap, b: DOMStringMap) => number> = {
+    new: (a, b) => Number(b.published) - Number(a.published),
+    old: (a, b) => Number(a.published) - Number(b.published),
+    short: (a, b) => Number(a.duration) - Number(b.duration),
+    title: (a, b) => a.title!.localeCompare(b.title!),
+  };
+
+  let collection = "";
+
+  // State lives in the URL, so a filtered list can be shared or bookmarked.
+  function readUrl() {
+    const params = new URLSearchParams(location.search);
+    input.value = params.get("q") ?? "";
+    sort.value = orders[params.get("sort") ?? ""] ? params.get("sort")! : "new";
+    const c = params.get("c") ?? "";
+    collection = chips.some((b) => b.dataset.collection === c) ? c : "";
+  }
+
+  function writeUrl() {
+    const params = new URLSearchParams();
+    if (input.value.trim()) params.set("q", input.value.trim());
+    if (collection) params.set("c", collection);
+    if (sort.value !== "new") params.set("sort", sort.value);
+    const query = params.toString();
+    history.replaceState(null, "", query ? `?${query}` : location.pathname);
+  }
+
+  function apply() {
+    // Every word must appear somewhere in the story, in either language.
+    const words = input.value
+      .toLowerCase()
+      .normalize("NFC")
+      .split(/\s+/)
+      .filter(Boolean);
+    let shown = 0;
+    for (const card of cards) {
+      const d = card.dataset;
+      const match =
+        (!collection || d.collection === collection) &&
+        words.every((w) => d.search!.includes(w));
+      card.hidden = !match;
+      if (match) shown++;
+    }
+    grid.append(
+      ...cards.sort((a, b) => orders[sort.value](a.dataset, b.dataset)),
+    );
+    chips.forEach((b) =>
+      b.setAttribute(
+        "aria-pressed",
+        String(b.dataset.collection === collection),
+      ),
+    );
+    count.textContent = `${shown} ${shown === 1 ? "story" : "stories"}`;
+    empty.hidden = shown > 0;
+  }
+
+  const update = () => {
+    apply();
+    writeUrl();
+  };
+
+  input.addEventListener("input", update);
+  sort.addEventListener("change", update);
+  form.addEventListener("submit", (e) => e.preventDefault());
+  chips.forEach((b) =>
+    b.addEventListener("click", () => {
+      collection = b.dataset.collection ?? "";
+      update();
+    }),
+  );
+  empty.querySelector("button")!.addEventListener("click", () => {
+    input.value = "";
+    collection = "";
+    update();
+    input.focus();
+  });
+
+  readUrl();
+  apply();
+  form.hidden = false;
+</script>
+
+<style>
+  .hero {
+    padding-top: clamp(2.5rem, 7vw, 5rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 6.2vw, 4.4rem);
+    max-width: 15ch;
+    margin-top: 1rem;
+  }
+
+  h1 em {
+    color: var(--accent);
+  }
+
+  .lede {
+    max-width: 38rem;
+    margin: 1.5rem 0 0;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  .lede a {
+    color: var(--ink);
+  }
+
+  .channel {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 550;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .channel:hover {
+    text-decoration: underline;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+  }
+
+  .controls[hidden] {
+    display: none;
+  }
+
+  @media (max-width: 30rem) {
+    .controls {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  input,
+  select {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    min-width: 0;
+  }
+
+  input:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .chips {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .chips button {
+    font: inherit;
+    font-size: 0.88rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .chips button span {
+    margin-left: 0.15rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .chips button:hover {
+    border-color: var(--accent);
+  }
+
+  .chips button[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  .chips button[aria-pressed="true"] span {
+    color: inherit;
+    opacity: 0.8;
+  }
+
+  .count {
+    margin: 1.75rem 0 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+    gap: 2rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .grid :global(.story[hidden]) {
+    display: none;
+  }
+
+  .empty {
+    margin: 2rem 0;
+    color: var(--muted);
+  }
+
+  .empty button {
+    font: inherit;
+    color: var(--accent);
+    background: none;
+    border: 0;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>

@@ -1,0 +1,71 @@
+{
+  "title": "The Camel and the Jackal",
+  "titleHi": "ऊँट और सियार",
+  "collection": "panchatantra",
+  "youtube": "_pEeeS2mhrY",
+  "short": "onC502Bi9xE",
+  "published": "2026-11-05",
+  "duration": 267,
+  "summary": "A kind camel and a cunning jackal are best friends by a river. Across the water lies a field of sweet melons, but the jackal can't swim, so the camel carries him over on his back. Once his belly is full, though, the jackal remembers his \"habit\": \"Hoo-aan... hoo-aan!\" Watch what happens next.",
+  "summaryHi": "नदी किनारे जंगल में एक भोला ऊँट और एक चालाक सियार पक्के दोस्त थे। नदी के उस पार खरबूजों का खेत देखकर सियार के मुँह में पानी आ गया, पर उसे तैरना नहीं आता था। तो भोले ऊँट ने उसे पीठ पर बिठाया और नदी पार ले गया। पर पेट भरते ही सियार को सूझी अपनी \"आदत\": \"हुआँ... हुआँ!\" फिर क्या हुआ? देखिए यह मज़ेदार कहानी।",
+  "moral": "As you sow, so shall you reap. Whoever does harm to others has the same done to them.",
+  "moralHi": "जैसी करनी, वैसी भरनी। जो दूसरों के साथ बुरा करता है, उसके साथ भी वैसा ही होता है।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Best friends",
+      "titleHi": "पक्के दोस्त"
+    },
+    {
+      "start": 19,
+      "title": "Melons across the river",
+      "titleHi": "उस पार खरबूजे"
+    },
+    {
+      "start": 48,
+      "title": "A ride on the camel",
+      "titleHi": "ऊँट की सवारी"
+    },
+    {
+      "start": 68,
+      "title": "The feast",
+      "titleHi": "दावत"
+    },
+    {
+      "start": 100,
+      "title": "The howl",
+      "titleHi": "हुआँ-हुआँ"
+    },
+    {
+      "start": 130,
+      "title": "The farmer wakes",
+      "titleHi": "किसान जागा"
+    },
+    {
+      "start": 143,
+      "title": "The beating",
+      "titleHi": "पिटाई"
+    },
+    {
+      "start": 168,
+      "title": "The way back",
+      "titleHi": "वापसी"
+    },
+    {
+      "start": 197,
+      "title": "In midstream",
+      "titleHi": "बीच धार में"
+    },
+    {
+      "start": 224,
+      "title": "Swept away",
+      "titleHi": "बहाव"
+    },
+    {
+      "start": 247,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-camel-and-the-jackal.jpg"
+}

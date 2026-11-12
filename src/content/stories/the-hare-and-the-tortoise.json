@@ -1,0 +1,76 @@
+{
+  "title": "The Hare and the Tortoise",
+  "titleHi": "खरगोश और कछुए की दौड़",
+  "collection": "moral",
+  "youtube": "-cOWStlcaIY",
+  "short": "GAK32BD_jto",
+  "published": "2026-10-29",
+  "duration": 277,
+  "summary": "A hare in the forest was very proud of how fast he could run. One day he made fun of the slow tortoise and challenged him to a race. The moment it began, the hare ran off like the wind… but on the way he stopped to chat with a deer, ate carrot after carrot, filled up on Grandpa Bear's sweet jamuns, and then lay down for a long nap in the shade! 😴 Meanwhile the tortoise kept going, slowly, without ever stopping. So who won the race? Watch the whole story! 🐢🏁",
+  "summaryHi": "एक जंगल में एक खरगोश रहता था, जिसे अपनी तेज़ चाल पर बड़ा घमंड था। एक दिन उसने धीमे कछुए का मज़ाक उड़ाया और उसे दौड़ की चुनौती दे दी। दौड़ शुरू होते ही खरगोश हवा की तरह भागा… पर रास्ते में कभी हिरण से गप्पें, कभी गाजरें, कभी भालू दादा के मीठे जामुन, और फिर पेड़ की छाँव में एक लंबी नींद! 😴 उधर कछुआ बिना रुके, धीरे-धीरे चलता रहा। आख़िर दौड़ कौन जीता? देखिए पूरी कहानी! 🐢🏁",
+  "moral": "Never be proud and boastful. Slow and steady wins the race!",
+  "moralHi": "कभी भी घमंड मत करो। धीरे-धीरे पर लगातार चलने वाला ही जीतता है!",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Intro",
+      "titleHi": "शुरुआत"
+    },
+    {
+      "start": 12,
+      "title": "The boastful hare",
+      "titleHi": "खरगोश का घमंड"
+    },
+    {
+      "start": 33,
+      "title": "Getting ready to race",
+      "titleHi": "दौड़ की तैयारी"
+    },
+    {
+      "start": 54,
+      "title": "The race begins!",
+      "titleHi": "दौड़ शुरू!"
+    },
+    {
+      "start": 76,
+      "title": "The carrot field",
+      "titleHi": "गाजर का खेत"
+    },
+    {
+      "start": 109,
+      "title": "The deer's advice",
+      "titleHi": "हिरण की सलाह"
+    },
+    {
+      "start": 132,
+      "title": "Grandpa Bear's jamuns",
+      "titleHi": "भालू दादा के जामुन"
+    },
+    {
+      "start": 168,
+      "title": "The hare falls asleep",
+      "titleHi": "खरगोश सो गया"
+    },
+    {
+      "start": 187,
+      "title": "The tortoise passes him",
+      "titleHi": "कछुआ आगे निकला"
+    },
+    {
+      "start": 222,
+      "title": "The hare wakes up",
+      "titleHi": "खरगोश जागा"
+    },
+    {
+      "start": 234,
+      "title": "The tortoise wins!",
+      "titleHi": "कछुआ जीत गया!"
+    },
+    {
+      "start": 251,
+      "title": "The moral",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-hare-and-the-tortoise.jpg"
+}

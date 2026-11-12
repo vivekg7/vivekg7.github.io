@@ -1,0 +1,66 @@
+{
+  "title": "The Blue Jackal",
+  "titleHi": "नीला सियार",
+  "collection": "panchatantra",
+  "youtube": "duGkJY2a2tE",
+  "short": "kGp8-2N9L1E",
+  "published": "2026-11-06",
+  "duration": 231,
+  "summary": "Hungry Chandar the jackal jumped into a dyer's vat of indigo to escape the village dogs, and came out bright blue! The forest animals had never seen such a creature, and the clever jackal made the most of it. But one moonlit night, something happened... Watch this fun Panchatantra tale!",
+  "summaryHi": "भूखा सियार चंदर कुत्तों से बचने के लिए रंगरेज़ की नील भरी नाद में कूद गया, और बाहर निकला तो पूरा नीला हो चुका था! जंगल के जानवरों ने ऐसा अनोखा जानवर कभी नहीं देखा था, और चालाक चंदर ने इसका पूरा फ़ायदा उठाया। पर एक चाँदनी रात कुछ ऐसा हुआ कि... देखिए पंचतंत्र की यह मज़ेदार कहानी!",
+  "moral": "Lies and pretence don't last long. One day the truth always comes out.",
+  "moralHi": "झूठ और दिखावा ज़्यादा दिन नहीं चलता। एक दिन सच सामने आ ही जाता है।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The hungry jackal",
+      "titleHi": "भूखा सियार"
+    },
+    {
+      "start": 26,
+      "title": "The village dogs",
+      "titleHi": "गाँव के कुत्ते"
+    },
+    {
+      "start": 39,
+      "title": "The vat of indigo",
+      "titleHi": "नील की नाद"
+    },
+    {
+      "start": 63,
+      "title": "The frightened animals",
+      "titleHi": "डर गए जानवर"
+    },
+    {
+      "start": 95,
+      "title": "I am your king",
+      "titleHi": "मैं तुम्हारा राजा हूँ"
+    },
+    {
+      "start": 118,
+      "title": "The king's good life",
+      "titleHi": "राजा के ठाठ"
+    },
+    {
+      "start": 137,
+      "title": "Away with the jackals",
+      "titleHi": "सियारों को निकालो"
+    },
+    {
+      "start": 162,
+      "title": "The moonlit night",
+      "titleHi": "चाँदनी रात"
+    },
+    {
+      "start": 186,
+      "title": "Found out",
+      "titleHi": "भेद खुल गया"
+    },
+    {
+      "start": 213,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-blue-jackal.jpg"
+}

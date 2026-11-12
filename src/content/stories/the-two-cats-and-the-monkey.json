@@ -1,0 +1,76 @@
+{
+  "title": "The Two Cats and the Monkey",
+  "titleHi": "दो बिल्लियाँ और बंदर",
+  "collection": "panchatantra",
+  "youtube": "f_CFqL3pj8Q",
+  "short": "XHLFDEicn7s",
+  "published": "2026-11-02",
+  "duration": 255,
+  "summary": "Two best friends, Bhuri and Kajri, live under an old banyan tree. One hungry morning they snatch a roti from Amma's courtyard, but the moment they split it, the quarrel begins: \"Your piece is bigger!\" Down climbs a clever monkey with his scale: \"I'll make them exactly equal!\" Watch what happens next.",
+  "summaryHi": "गाँव के किनारे एक पुराने बरगद के नीचे दो पक्की सहेलियाँ रहती थीं — भूरी और कजरी। एक दिन भूख लगी तो दोनों अम्मा के आँगन से एक रोटी उठा लाईं। पर रोटी बाँटते ही झगड़ा शुरू हो गया: \"तेरा टुकड़ा बड़ा है!\" तभी पेड़ से उतरा एक चतुर बंदर, अपना तराज़ू लेकर — \"मैं ठीक-ठीक बराबर बाँट दूँगा!\" फिर क्या हुआ? देखिए यह मज़ेदार कहानी।",
+  "moral": "When two quarrel, it is always the third who gains. Settle your quarrels between yourselves, with love.",
+  "moralHi": "दो की लड़ाई में फ़ायदा हमेशा तीसरे का होता है। अपने झगड़े आपस में, प्यार से सुलझाओ।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The banyan tree",
+      "titleHi": "बरगद का पेड़"
+    },
+    {
+      "start": 20,
+      "title": "Hungry",
+      "titleHi": "भूख"
+    },
+    {
+      "start": 41,
+      "title": "The road to the village",
+      "titleHi": "गाँव का रास्ता"
+    },
+    {
+      "start": 53,
+      "title": "Amma's courtyard",
+      "titleHi": "अम्मा का आँगन"
+    },
+    {
+      "start": 75,
+      "title": "The stolen roti",
+      "titleHi": "रोटी की चोरी"
+    },
+    {
+      "start": 88,
+      "title": "Half and half",
+      "titleHi": "आधी-आधी"
+    },
+    {
+      "start": 101,
+      "title": "The quarrel",
+      "titleHi": "झगड़ा"
+    },
+    {
+      "start": 126,
+      "title": "Uncle Monkey",
+      "titleHi": "बंदर मामा"
+    },
+    {
+      "start": 151,
+      "title": "The scale",
+      "titleHi": "तराज़ू"
+    },
+    {
+      "start": 169,
+      "title": "Weighing",
+      "titleHi": "तौल"
+    },
+    {
+      "start": 202,
+      "title": "Stop!",
+      "titleHi": "बस करो!"
+    },
+    {
+      "start": 228,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-two-cats-and-the-monkey.jpg"
+}

@@ -1,0 +1,61 @@
+{
+  "title": "The Clever Rabbit and the Lion",
+  "titleHi": "चतुर खरगोश और शेर",
+  "collection": "panchatantra",
+  "youtube": "zI5MfQgZRgY",
+  "short": "FtunX3CmNaI",
+  "published": "2026-11-07",
+  "duration": 264,
+  "summary": "The proud lion of the forest killed animal after animal, so the animals struck a deal: every day one of them would go to him. Then one day it was the little rabbit's turn. What could a tiny rabbit do against such a big lion? An old well on the way gave him an idea the lion never saw coming!",
+  "summaryHi": "जंगल का घमंडी शेर रोज़ कई-कई जानवरों को मार डालता था, इसलिए जानवरों ने उससे सौदा किया: हर रोज़ एक जानवर ख़ुद उसके पास जाएगा। फिर एक दिन नन्हे खरगोश की बारी आई। छोटा सा खरगोश भला इतने बड़े शेर का क्या कर लेगा? रास्ते के एक पुराने कुएँ ने उसे एक ऐसा उपाय सुझाया, जो शेर ने कभी सोचा भी नहीं था!",
+  "moral": "Brains are stronger than brawn. In trouble, don't panic: think it through.",
+  "moralHi": "बुद्धि, बल से बड़ी होती है। मुसीबत में घबराओ मत, सूझ-बूझ से काम लो।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The lion's terror",
+      "titleHi": "शेर का आतंक"
+    },
+    {
+      "start": 19,
+      "title": "The animals meet",
+      "titleHi": "जानवरों की सभा"
+    },
+    {
+      "start": 37,
+      "title": "The bargain",
+      "titleHi": "शेर से सौदा"
+    },
+    {
+      "start": 71,
+      "title": "The rabbit's turn",
+      "titleHi": "खरगोश की बारी"
+    },
+    {
+      "start": 99,
+      "title": "The old well",
+      "titleHi": "पुराना कुआँ"
+    },
+    {
+      "start": 129,
+      "title": "Late for dinner",
+      "titleHi": "देर से पहुँचा खरगोश"
+    },
+    {
+      "start": 181,
+      "title": "The enemy's fort",
+      "titleHi": "दुश्मन का किला"
+    },
+    {
+      "start": 204,
+      "title": "Another lion in the water",
+      "titleHi": "पानी में दूसरा शेर"
+    },
+    {
+      "start": 237,
+      "title": "The forest celebrates",
+      "titleHi": "जंगल में जश्न"
+    }
+  ],
+  "cover": "../../assets/stories/the-clever-rabbit-and-the-lion.jpg"
+}

@@ -2,6 +2,8 @@
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/noto-sans-devanagari";
+import "@fontsource-variable/noto-serif-devanagari";
 import "../styles/global.css";
 
 interface Props {
@@ -11,6 +13,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const section = Astro.url.pathname.split("/")[1];
 ---
 
 <!doctype html>
@@ -35,6 +38,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </a>
       <nav aria-label="Main">
         <a href="/#work">Work</a>
+        <a
+          href="/stories/"
+          aria-current={section === "stories" ? "page" : undefined}
+        >
+          Stories
+        </a>
         <a href="https://github.com/vivekg7">GitHub</a>
       </nav>
     </header>
@@ -86,7 +95,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     color: var(--muted);
   }
 
-  nav a:hover {
+  nav a:hover,
+  nav a[aria-current] {
     color: var(--ink);
   }
 

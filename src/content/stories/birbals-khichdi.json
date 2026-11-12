@@ -1,0 +1,66 @@
+{
+  "title": "Birbal's Khichdi",
+  "titleHi": "बीरबल की खिचड़ी",
+  "collection": "akbar-birbal",
+  "youtube": "wVdfxSva-Cw",
+  "short": "5eKTCiEl9zk",
+  "published": "2026-11-09",
+  "duration": 323,
+  "summary": "In a bitter winter, Emperor Akbar promised a reward to anyone who could stand all night in the icy Yamuna. Poor Bhola the washerman did it for his children, but lost the reward because of a lamp burning far away. Then Birbal cooked a khichdi that left even the Emperor speechless!",
+  "summaryHi": "कड़ाके की सर्दी में बादशाह अकबर ने ऐलान किया: जो रात भर यमुना के बर्फ़ीले पानी में खड़ा रहेगा, उसे शाही इनाम मिलेगा। ग़रीब भोला धोबी ने अपने बच्चों की ख़ातिर ये कर दिखाया, पर एक दूर जलते दीये की वजह से उसका इनाम छिन गया। तब बीरबल ने ऐसी खिचड़ी पकाई, जिसे देखकर बादशाह भी हैरान रह गए!",
+  "moral": "Never take away what someone has earned by hard work, with an excuse.",
+  "moralHi": "किसी की मेहनत का हक़, बहाने बनाकर नहीं छीनना चाहिए।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The Emperor's question",
+      "titleHi": "बादशाह का सवाल"
+    },
+    {
+      "start": 42,
+      "title": "The announcement at the ghat",
+      "titleHi": "घाट पर ऐलान"
+    },
+    {
+      "start": 80,
+      "title": "The icy night",
+      "titleHi": "बर्फ़ीली रात"
+    },
+    {
+      "start": 116,
+      "title": "The reward refused",
+      "titleHi": "इनाम से इनकार"
+    },
+    {
+      "start": 162,
+      "title": "Birbal's comfort",
+      "titleHi": "बीरबल की तसल्ली"
+    },
+    {
+      "start": 187,
+      "title": "Where is Birbal?",
+      "titleHi": "बीरबल कहाँ है?"
+    },
+    {
+      "start": 199,
+      "title": "The khichdi is cooking",
+      "titleHi": "खिचड़ी पक रही है"
+    },
+    {
+      "start": 213,
+      "title": "The wait",
+      "titleHi": "इंतज़ार"
+    },
+    {
+      "start": 234,
+      "title": "Birbal's khichdi",
+      "titleHi": "बीरबल की खिचड़ी"
+    },
+    {
+      "start": 288,
+      "title": "Bhola's reward",
+      "titleHi": "भोला का इनाम"
+    }
+  ],
+  "cover": "../../assets/stories/birbals-khichdi.jpg"
+}

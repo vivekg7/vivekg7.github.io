@@ -1,0 +1,76 @@
+{
+  "title": "Three Questions",
+  "titleHi": "तीन प्रश्न",
+  "collection": "tolstoy",
+  "youtube": "56VZevzM0N8",
+  "short": "depau30-R8c",
+  "published": "2026-11-11",
+  "duration": 444,
+  "summary": "A king wanted the answers to three questions: what is the right time for every deed, who is the most important person, and what is the most important thing to do? When his court's scholars could not answer, he dressed as a farmer and climbed to an old sage who lived on a mountain top. But at the foot of the mountain, someone was hiding behind a boulder... Will the king find his answers?",
+  "summaryHi": "एक राजा तीन प्रश्नों के उत्तर ढूँढ रहा था: किसी काम का सबसे सही समय कौन-सा है, सबसे ज़रूरी व्यक्ति कौन है, और सबसे ज़रूरी काम कौन-सा है? दरबार के विद्वान कोई सही उत्तर नहीं दे पाए, तो राजा किसान का वेश धरकर पहाड़ की चोटी पर रहने वाले एक बूढ़े महात्मा के पास गया। पर पहाड़ के नीचे एक चट्टान के पीछे कोई छिपा बैठा था... क्या राजा को उसके उत्तर मिलेंगे?",
+  "moral": "The most important time is now, the most important person is the one in front of you, and the most important work is to do them good.",
+  "moralHi": "सबसे ज़रूरी समय अभी है, सबसे ज़रूरी व्यक्ति वही है जो इस समय सामने है, और सबसे ज़रूरी काम है उसका भला करना।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The king's three questions",
+      "titleHi": "राजा के तीन प्रश्न"
+    },
+    {
+      "start": 42,
+      "title": "The scholars' answers",
+      "titleHi": "विद्वानों के उत्तर"
+    },
+    {
+      "start": 96,
+      "title": "In a farmer's clothes",
+      "titleHi": "किसान के वेश में"
+    },
+    {
+      "start": 127,
+      "title": "The old sage",
+      "titleHi": "बूढ़े महात्मा"
+    },
+    {
+      "start": 162,
+      "title": "The king digs",
+      "titleHi": "राजा की खुदाई"
+    },
+    {
+      "start": 198,
+      "title": "The running man",
+      "titleHi": "भागता हुआ आदमी"
+    },
+    {
+      "start": 226,
+      "title": "Binding the wound",
+      "titleHi": "घाव पर पट्टी"
+    },
+    {
+      "start": 274,
+      "title": "The confession",
+      "titleHi": "माफ़ी"
+    },
+    {
+      "start": 310,
+      "title": "Below the mountain",
+      "titleHi": "पहाड़ के नीचे"
+    },
+    {
+      "start": 330,
+      "title": "An enemy becomes a friend",
+      "titleHi": "दुश्मन बना दोस्त"
+    },
+    {
+      "start": 357,
+      "title": "The three answers",
+      "titleHi": "तीनों उत्तर"
+    },
+    {
+      "start": 412,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/three-questions.jpg"
+}

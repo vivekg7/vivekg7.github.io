@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import { collections } from "../data/collections";
+import { clock, spoken, type Story } from "../lib/stories";
+
+interface Props {
+  story: Story;
+}
+
+const { story } = Astro.props;
+const s = story.data;
+const collection = collections[s.collection];
+
+// Everything the search box matches against, lower-cased once here.
+const haystack = [
+  s.title,
+  s.titleHi,
+  collection.label,
+  collection.labelHi,
+  s.summary,
+  s.summaryHi,
+  s.moral,
+  s.moralHi,
+  ...s.chapters.flatMap((c) => [c.title, c.titleHi]),
+]
+  .filter(Boolean)
+  .join(" ")
+  .toLowerCase()
+  .normalize("NFC");
+---
+
+<li
+  class="story"
+  data-search={haystack}
+  data-collection={s.collection}
+  data-published={s.published.getTime()}
+  data-duration={s.duration}
+  data-title={s.title}
+>
+  <a href={`/stories/${story.id}/`}>
+    <div class="thumb">
+      <Image
+        src={s.cover}
+        alt=""
+        widths={[400, 640, 960]}
+        sizes="(min-width: 72rem) 22rem, (min-width: 40rem) 45vw, 100vw"
+        loading="lazy"
+      />
+      <span class="time" aria-label={spoken(s.duration)}>
+        {clock(s.duration)}
+      </span>
+    </div>
+    <p class="eyebrow">{collection.label}</p>
+    <h3>{s.title}</h3>
+    <p class="hi" lang="hi">
+      {s.titleHi}
+    </p>
+  </a>
+</li>
+
+<style>
+  .story a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-decoration: none;
+  }
+
+  .thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+    border: 1px solid var(--line);
+  }
+
+  .thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .story a:hover .thumb :global(img) {
+    transform: scale(1.03);
+  }
+
+  .time {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    background: rgb(0 0 0 / 0.72);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .story a:hover h3 {
+    color: var(--accent);
+  }
+
+  .hi {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .thumb :global(img) {
+      transition: none;
+    }
+  }
+</style>

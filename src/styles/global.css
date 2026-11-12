@@ -6,8 +6,13 @@
   --line: #e2ddd3;
   --accent: #b4532a;
 
-  --font-display: "Fraunces Variable", Georgia, serif;
-  --font-body: "Inter Variable", system-ui, -apple-system, sans-serif;
+  /* The Devanagari faces only cover Hindi text (their Latin is never reached),
+     so the browser downloads them only on pages that have some. */
+  --font-display:
+    "Fraunces Variable", "Noto Serif Devanagari Variable", Georgia, serif;
+  --font-body:
+    "Inter Variable", "Noto Sans Devanagari Variable", system-ui, -apple-system,
+    sans-serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, Menlo, monospace;
 
   --page: 72rem;
@@ -80,6 +85,11 @@ h3 {
   letter-spacing: -0.01em;
   font-variation-settings: "opsz" 96;
   margin: 0;
+}
+
+:lang(hi) {
+  /* Devanagari's vowel signs reach well above and below the line. */
+  line-height: 1.75;
 }
 
 code,

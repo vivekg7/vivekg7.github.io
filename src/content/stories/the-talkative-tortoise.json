@@ -1,0 +1,61 @@
+{
+  "title": "The Talkative Tortoise",
+  "titleHi": "बातूनी कछुआ",
+  "collection": "panchatantra",
+  "youtube": "JW1yrj6SVDw",
+  "short": "BTGtxHq_QA8",
+  "published": "2026-11-11",
+  "duration": 304,
+  "summary": "Kambugreev the tortoise lived in a lovely lake and could never stop interrupting. When a drought dried the lake up, his friends, two swans, came up with a plan to fly him to a faraway lake on a stick. There was just one condition: he must not open his mouth on the way. Can the chatterbox keep quiet?",
+  "summaryHi": "एक सुंदर तालाब में कम्बुग्रीव नाम का एक कछुआ रहता था, जिसे बीच में टोकने की बहुत आदत थी। जब सूखे में तालाब सूख गया, तो उसके दोस्त दो हंसों ने उसे एक लकड़ी के सहारे उड़ाकर दूर की झील तक ले जाने की तरकीब निकाली। बस एक शर्त थी: रास्ते में मुँह नहीं खोलना। क्या बातूनी कम्बुग्रीव चुप रह पाएगा?",
+  "moral": "Look at the moment before you speak. Opening your mouth without thinking can cost you dearly.",
+  "moralHi": "बोलने से पहले मौक़ा देखो। बिना सोचे मुँह खोलना, कभी-कभी बहुत महँगा पड़ता है।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Friends at the lake",
+      "titleHi": "तालाब के दोस्त"
+    },
+    {
+      "start": 40,
+      "title": "The interrupter",
+      "titleHi": "बीच में टोकने की आदत"
+    },
+    {
+      "start": 84,
+      "title": "The drought",
+      "titleHi": "सूखा"
+    },
+    {
+      "start": 119,
+      "title": "A lake fifty kos away",
+      "titleHi": "पचास कोस दूर झील"
+    },
+    {
+      "start": 152,
+      "title": "The swans' plan",
+      "titleHi": "हंसों की तरकीब"
+    },
+    {
+      "start": 198,
+      "title": "The flight",
+      "titleHi": "उड़ान"
+    },
+    {
+      "start": 221,
+      "title": "Over the town",
+      "titleHi": "कस्बे के ऊपर"
+    },
+    {
+      "start": 255,
+      "title": "He opens his mouth",
+      "titleHi": "मुँह खुला"
+    },
+    {
+      "start": 273,
+      "title": "The lesson",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-talkative-tortoise.jpg"
+}

@@ -42,6 +42,18 @@ it, taken from the project's own README and design docs. Keep claims checkable
 against the repository: sizes, counts and platforms go stale, so re-check them
 when a project ships a new version.
 
+## Stories
+
+`/stories/` lists every film on the
+[Kahani ki Potli](https://www.youtube.com/@KahaniKiPotli7) channel, which is
+made with talekit. Each film is one JSON file in `src/content/stories/`, with
+its cover in `src/assets/stories/`. The collections the filters offer are
+listed in `src/data/collections.ts`; a film from a new one needs an entry
+there first.
+
+The film plays from `youtube-nocookie.com`, and only once the cover is
+clicked, so a story page loads no YouTube code until then.
+
 ## The old site
 
 Until 2020 this repo held a create-react-app build that registered a service

@@ -37,6 +37,8 @@ with comic-style speech bubbles and spoken lines.
 of Hindi stories for children made entirely with talekit: Panchatantra fables,
 Tenali Rama and other classic tales. Each story goes out as a full film and
 as a portrait reel of around three minutes, with Hindi and English subtitles.
+Every film so far is on the [stories page](/stories/), with its chapters
+and its moral in both languages.
 
 ## The idea: "Paper for video"
 

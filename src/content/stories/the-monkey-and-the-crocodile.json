@@ -1,0 +1,66 @@
+{
+  "title": "The Monkey and the Crocodile",
+  "titleHi": "बंदर और मगरमच्छ",
+  "collection": "panchatantra",
+  "youtube": "SeM0ZOX2JgU",
+  "short": "SIuD3K0t3u8",
+  "published": "2026-11-06",
+  "duration": 237,
+  "summary": "A cheerful monkey who lives in a jamun tree by the river feeds a simple crocodile sweet jamuns every day, and the two become fast friends. But the crocodile's wife turns greedy: she wants the monkey's heart! In the middle of the river, on the crocodile's back, with nowhere to run... can the monkey save his life? Watch this famous tale from the Panchatantra.",
+  "summaryHi": "नदी किनारे जामुन के पेड़ पर रहने वाला एक हँसमुख बंदर, एक भोले मगरमच्छ को रोज़ मीठे जामुन खिलाता है, और दोनों पक्के दोस्त बन जाते हैं। पर मगरमच्छ की पत्नी के मन में लालच आ जाता है: उसे बंदर का कलेजा चाहिए! बीच नदी में, मगरमच्छ की पीठ पर बैठा बंदर, जहाँ से भागने का कोई रास्ता नहीं... क्या वह अपनी जान बचा पाएगा? पंचतंत्र की यह मशहूर कहानी देखिए।",
+  "moral": "Never betray a friend, and in trouble, don't panic: think calmly.",
+  "moralHi": "दोस्ती में कभी धोखा नहीं देना चाहिए, और मुश्किल में घबराने के बजाय धीरज से सोचना चाहिए।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "The jamun tree",
+      "titleHi": "जामुन का पेड़"
+    },
+    {
+      "start": 15,
+      "title": "The crocodile comes",
+      "titleHi": "मगरमच्छ आया"
+    },
+    {
+      "start": 36,
+      "title": "Fast friends",
+      "titleHi": "पक्के दोस्त"
+    },
+    {
+      "start": 58,
+      "title": "The wife's greed",
+      "titleHi": "मगरमच्छनी का लालच"
+    },
+    {
+      "start": 91,
+      "title": "The pretend illness",
+      "titleHi": "बीमारी का नाटक"
+    },
+    {
+      "start": 116,
+      "title": "The invitation",
+      "titleHi": "दावत का न्योता"
+    },
+    {
+      "start": 141,
+      "title": "The truth, midstream",
+      "titleHi": "बीच नदी में सच"
+    },
+    {
+      "start": 165,
+      "title": "The monkey's trick",
+      "titleHi": "बंदर का उपाय"
+    },
+    {
+      "start": 188,
+      "title": "The leap",
+      "titleHi": "छलाँग!"
+    },
+    {
+      "start": 221,
+      "title": "The moral",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-monkey-and-the-crocodile.jpg"
+}

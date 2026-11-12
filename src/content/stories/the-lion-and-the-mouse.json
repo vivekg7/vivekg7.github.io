@@ -1,0 +1,91 @@
+{
+  "title": "The Lion and the Mouse",
+  "titleHi": "शेर और चूहा",
+  "collection": "moral",
+  "youtube": "_tGcmShVjk0",
+  "short": "XzTDdx6de5k",
+  "published": "2026-11-01",
+  "duration": 328,
+  "summary": "In a thick forest, the great lion was king, and in the same forest lived a little mouse, Chintu, with his mother. Though his mother had said no, naughty Chintu went bouncing about on the sleeping lion's back! 😮 The lion pinned him under his paw, but laughed at the mouse's promise and let him go: \"You? Help me?\" A few days later, the lion was caught in a hunter's net… 🕸️ Watch how little Chintu kept his word.",
+  "summaryHi": "एक घने जंगल में शेर महाराज राज करते थे, और उसी जंगल में नन्हा चूहा चिंटू अपनी माँ के साथ रहता था। माँ के मना करने पर भी शरारती चिंटू सोते हुए शेर की पीठ पर उछलने-कूदने लगा! 😮 शेर ने उसे पंजे में दबोच लिया, पर चिंटू की बात पर हँसकर उसे छोड़ दिया: \"तुम? मेरे काम आओगे?\" कुछ दिनों बाद शेर शिकारी के जाल में फँस गया… 🕸️ देखिए, नन्हे चिंटू ने अपना वादा कैसे निभाया।",
+  "moral": "Never think of anyone as small or weak. A kindness done is never wasted.",
+  "moralHi": "किसी को छोटा या कमज़ोर मत समझो। की हुई भलाई कभी बेकार नहीं जाती।",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Chintu and his mother",
+      "titleHi": "चिंटू और उसकी माँ"
+    },
+    {
+      "start": 33,
+      "title": "A walk in the forest",
+      "titleHi": "जंगल की सैर"
+    },
+    {
+      "start": 53,
+      "title": "The sleeping lion",
+      "titleHi": "सोता हुआ शेर"
+    },
+    {
+      "start": 71,
+      "title": "On the lion's back",
+      "titleHi": "शेर की पीठ पर"
+    },
+    {
+      "start": 84,
+      "title": "The lion wakes up!",
+      "titleHi": "शेर जाग गया!"
+    },
+    {
+      "start": 98,
+      "title": "Please let me go",
+      "titleHi": "मुझे छोड़ दीजिए"
+    },
+    {
+      "start": 128,
+      "title": "Back home to Mum",
+      "titleHi": "माँ की डाँट"
+    },
+    {
+      "start": 152,
+      "title": "The hunter's net",
+      "titleHi": "शिकारी का जाल"
+    },
+    {
+      "start": 174,
+      "title": "The lion is trapped",
+      "titleHi": "शेर फँस गया"
+    },
+    {
+      "start": 198,
+      "title": "A roar in the forest",
+      "titleHi": "दहाड़ सुनी"
+    },
+    {
+      "start": 221,
+      "title": "Chintu to the rescue",
+      "titleHi": "चिंटू आ गया"
+    },
+    {
+      "start": 240,
+      "title": "Gnawing the net",
+      "titleHi": "जाल कुतरा"
+    },
+    {
+      "start": 263,
+      "title": "The lion is free!",
+      "titleHi": "शेर आज़ाद!"
+    },
+    {
+      "start": 284,
+      "title": "Friends for ever",
+      "titleHi": "पक्की दोस्ती"
+    },
+    {
+      "start": 312,
+      "title": "The moral",
+      "titleHi": "सीख"
+    }
+  ],
+  "cover": "../../assets/stories/the-lion-and-the-mouse.jpg"
+}

@@ -1,0 +1,76 @@
+{
+  "title": "The Farmer and the Bundle of Sticks",
+  "titleHi": "किसान और लकड़ी का गठ्ठर",
+  "collection": "moral",
+  "youtube": "XMkab2uAdzQ",
+  "short": "FpPM6fJCyVM",
+  "published": "2026-10-29",
+  "duration": 258,
+  "summary": "An old farmer lived in a village with his four sons. The brothers quarrelled over everything: who works the hardest, whose turn it is to feed the cow… The farmer was worried: \"What will become of them when I'm gone?\" 😟 One day, lying ill, he sent his sons to the forest for dry sticks. He asked each son to break one stick, and it snapped easily. But when all the sticks were tied into a bundle, none of them could break it! 🪵 Watch what the sons learned.",
+  "summaryHi": "एक गाँव में एक बूढ़ा किसान अपने चार बेटों के साथ रहता था। चारों भाई हर बात पर आपस में लड़ते रहते थे: कौन ज़्यादा काम करता है, आज गाय को चारा कौन डालेगा… किसान बहुत चिंतित था, \"मेरे बाद इनका क्या होगा?\" 😟 एक दिन बीमार किसान ने बेटों को जंगल से सूखी लकड़ियाँ लाने भेजा। फिर उसने हर बेटे से एक-एक लकड़ी तुड़वाई, जो आसानी से टूट गई। पर जब सारी लकड़ियाँ एक गठ्ठर में बँधीं, तो कोई उसे तोड़ न सका! 🪵 देखिए, बेटों ने क्या सीखा।",
+  "moral": "Unity is strength. Stay together, and no one can harm you!",
+  "moralHi": "एकता में बल है। साथ रहोगे, तो कोई कुछ नहीं बिगाड़ पाएगा!",
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Intro",
+      "titleHi": "शुरुआत"
+    },
+    {
+      "start": 12,
+      "title": "The brothers quarrel",
+      "titleHi": "भाइयों का झगड़ा"
+    },
+    {
+      "start": 34,
+      "title": "Father steps in",
+      "titleHi": "बाबा ने समझाया"
+    },
+    {
+      "start": 56,
+      "title": "Fighting again",
+      "titleHi": "फिर से झगड़ा"
+    },
+    {
+      "start": 76,
+      "title": "The farmer falls ill",
+      "titleHi": "किसान बीमार पड़ा"
+    },
+    {
+      "start": 95,
+      "title": "Father's task",
+      "titleHi": "बाबा का काम"
+    },
+    {
+      "start": 112,
+      "title": "Sticks from the forest",
+      "titleHi": "जंगल में लकड़ियाँ"
+    },
+    {
+      "start": 137,
+      "title": "Break one stick",
+      "titleHi": "एक-एक लकड़ी तोड़ो"
+    },
+    {
+      "start": 164,
+      "title": "The bundle won't break!",
+      "titleHi": "गठ्ठर नहीं टूटा!"
+    },
+    {
+      "start": 187,
+      "title": "Father's lesson",
+      "titleHi": "बाबा की सीख"
+    },
+    {
+      "start": 215,
+      "title": "The sons say sorry",
+      "titleHi": "बेटों ने माफ़ी माँगी"
+    },
+    {
+      "start": 236,
+      "title": "Unity is strength",
+      "titleHi": "एकता में बल है"
+    }
+  ],
+  "cover": "../../assets/stories/the-farmer-and-the-bundle-of-sticks.jpg"
+}
